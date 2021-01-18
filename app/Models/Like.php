@@ -9,8 +9,5 @@ class Like extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'quantity',
-        'user_id',
-    ];
+    protected $fillable = [];
 }
