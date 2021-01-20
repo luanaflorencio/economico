@@ -17,6 +17,7 @@ class PostSeeder extends Seeder
     {
         Post::create([
             'challenge' => '#challengebrabo',
+            'user_id' => 1
         ]);
     }
 }

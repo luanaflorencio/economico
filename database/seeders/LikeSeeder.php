@@ -14,7 +14,12 @@ class LikeSeeder extends Seeder
      */
     public function run()
     {
-        Like::create([]);
         //
+        Like::create([
+            'deslike' => 0,
+            'user_id' => 1,
+            'post_id' => 2
+
+        ]);
     }
 }

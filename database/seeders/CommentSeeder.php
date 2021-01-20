@@ -16,6 +16,8 @@ class CommentSeeder extends Seeder
     {
         Comment::create([
             'conteúdo' => 'vou participar',
+            'user_id' => 1,
+            'post_id' => 2
 
         ]);
         //
