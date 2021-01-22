@@ -20,4 +20,4 @@ thierry-git-config:
 
 bruno-git-config:
 	git config --global user.name "iBrunoManoel"
-	git config --global user.email ""
+	git config --global user.email "brunomanoel2019.2019@gmail.com"
