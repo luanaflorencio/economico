@@ -16,7 +16,6 @@ class LikeSeeder extends Seeder
     {
         //
         Like::create([
-            'deslike' => 0,
             'user_id' => 1,
             'post_id' => 2
 
