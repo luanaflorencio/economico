@@ -1,10 +1,8 @@
-.coin{
-    width:150%;
-    margin-top:70px;
+.card-text {
+    margin-left: 150px;
+    margin-top: 140px;
+    margin-right: 50px;
 }
-.text-eco{
-    font-weight:normal!important;
-    margin-right:100px;
-    margin-left:100px;
-
+.card-header {
+    background-color: #f9ac05;
 }

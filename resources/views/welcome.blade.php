@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
         <link href="{{ asset('css/welcome.css')}}" rel="stylesheet">
         <!-- Styles -->
@@ -23,6 +23,26 @@
         </style>
     </head>
     <body class="antialiased">
+
+        <div class="card">
+            <h2 class="card-header">$ economico</h2>
+            <div class="card-body">
+            </div>
+
+            <div class="card mb-3" style="max-width: 2000px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{ url('images/coin.png') }}" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                    <h1 class="card-text">O <strong> economico</strong> é feito para aqueles que não tem medo de desafios e desejam evoluir acada um ultrapassado, aprenda a controlar se dinheiro se divertindo com seus amigos!</h1> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
         <div class="relative flex items-top justify-center min-h-screen bg-white sm:items-center sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -32,17 +52,14 @@
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Cadastre-se agora</a>
                         @endif
                     @endauth
                 </div>
             @endif
-            
-
-            <img src="{{ url('images/coin.png') }}" class="coin">
-            
-            <h1 class="text-eco">O <strong> economico</strong> é feito para aqueles que não tem medo de desafios e desejam evoluir acada um ultrapassado, aprenda a controlar se dinheiro se divertindo com seus amigos!</h1>
-                    
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     </body>
 </html>
