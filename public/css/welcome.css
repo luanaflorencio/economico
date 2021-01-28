@@ -6,3 +6,6 @@
 .card-header {
     background-color: #f9ac05;
 }
+body {
+    overflow: hidden;
+}
