@@ -38,6 +38,6 @@
                 </div>
             @endif
         </div>
-        @include('includes.script')
+        @include('includes.scripts')
     </body>
 </html>

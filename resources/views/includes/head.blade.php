@@ -15,6 +15,6 @@
 
 <style>
     body {
-        font-family: 'Lora';
+        font-family: 'Nunito';
     }
 </style>

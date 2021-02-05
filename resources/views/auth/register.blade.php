@@ -8,7 +8,6 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
         
-
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -47,11 +46,11 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-sm text-blue-600 hover:text-blue-900" href="{{ route('login') }}">
                     {{ __('Já é cadastrado?') }}
                 </a>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4 bg-blue-500 hover:bg-blue-400">
                     {{ __('Cadastrar') }}
                 </x-button>
             </div>
