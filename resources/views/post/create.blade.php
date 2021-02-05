@@ -6,7 +6,7 @@
 <body>
     @include('includes.header')
 
-    @include('includes.script')
+    @include('includes.scripts')
 
 </body>
 </html>
