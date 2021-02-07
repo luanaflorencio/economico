@@ -5,6 +5,7 @@
 }
 .card-header {
     background-color: #f9ac05;
+    font-size: 35px;
 }
 body {
     overflow: hidden;
