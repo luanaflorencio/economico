@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -13,7 +16,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $post = Post::orderBy('created_at', 'desc')->get();
+        $user = User::where('id', Auth::id())->first();
+
+        // dd($post);
+        return view('post.index', compact('post', 'user')); 
     }
 
     /**
@@ -23,7 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -34,7 +41,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'challenge' => ['required','max:159'],
+        ]);
+        $post = new Post($validatedData);
+        $post->user_id = Auth::user()->id;
+        $post->save();
+
+        return redirect()->route('posts.index')->with('massages','Desafio proposto com sucesso');
     }
 
     /**
