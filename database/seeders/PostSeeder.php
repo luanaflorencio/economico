@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Post;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class PostSeeder extends Seeder
 {
@@ -15,9 +16,11 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Post::create([
-            'challenge' => '#challengebrabo',
-            'user_id' => 1
-        ]);
+        $users = User::all();
+        foreach ($users as $user) {
+            Post::factory(2)->create([
+                'user_id' => $user->id,
+            ]);
+        }
     }
 }
