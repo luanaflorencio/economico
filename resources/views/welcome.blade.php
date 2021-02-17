@@ -8,6 +8,7 @@
         <div class="card">
             
             @include('includes.header')
+            <link rel="stylesheet" href="{{ asset('css/scroll.css') }}">
 
             <div class="card mb-3" style="max-width: 2000px;">
                 <div class="row g-0">
