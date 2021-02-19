@@ -20,7 +20,7 @@ class PostController extends Controller
         $user = User::where('id', Auth::id())->first();
 
         // dd($post);
-        return view('post.index', compact('post', 'user')); 
+        return view('post.index', compact('post', 'user'));
     }
 
     /**
@@ -42,13 +42,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'challenge' => ['required','max:159'],
+            'challenge' => ['required', 'max:159'],
         ]);
         $post = new Post($validatedData);
         $post->user_id = Auth::user()->id;
         $post->save();
 
-        return redirect()->route('posts.index')->with('massages','Desafio proposto com sucesso');
+        return redirect()->route('dashboard')->with('massages', 'Desafio proposto com sucesso');
     }
 
     /**
@@ -94,5 +94,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+        Post::findOrFail($id)->delete();
+        return redirect()->back()->with('success', 'Desafio deletado!');
     }
 }
