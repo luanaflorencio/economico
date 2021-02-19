@@ -71,6 +71,7 @@ class PostController extends Controller
     public function edit($id)
     {
         //
+
     }
 
     /**
@@ -83,6 +84,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**
