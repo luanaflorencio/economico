@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $post = Post::orderBy('created_at', 'desc')->get();
+        $post = Post::orderBy('created_at', 'asc')->get();
         $user = User::where('id', Auth::id())->first();
 
         // dd($post);

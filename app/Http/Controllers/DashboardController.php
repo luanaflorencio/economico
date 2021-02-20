@@ -11,7 +11,7 @@ class DashboardController extends Controller
     //
     public function dashboard()
     {
-        $post = post::all();
+        $post = post::orderBy('created_at', 'desc')->get();
         return view('dashboard', compact('post'));
     }
 }
