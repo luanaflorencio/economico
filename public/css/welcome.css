@@ -8,7 +8,14 @@
     font-size: 35px;
 }
 .add {
-    margin-left: 95%;
+    margin-left: 94%;
     margin-bottom: 1%;
     cursor: pointer;
+}
+.title {
+    text-align: center;
+    font-size: 35px;
+}
+.newc {
+    margin-left: 90%;
 }
