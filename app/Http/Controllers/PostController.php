@@ -71,7 +71,6 @@ class PostController extends Controller
     public function edit($id)
     {
         //
-
     }
 
     /**
@@ -97,6 +96,6 @@ class PostController extends Controller
     {
         //
         Post::findOrFail($id)->delete();
-        return redirect()->back()->with('success', 'Desafio deletado!');
+        return redirect()->back()->with('success', 'Desafio excluído com sucesso!');
     }
 }
