@@ -22,6 +22,6 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(
 
 Route::resource('/posts', PostController::class)->middleware('auth');
 
-Route::get('/post/delete{id}', [PostController::class, 'destroy'])->name('del-post');
+Route::delete('/post/delete/{id}', [PostController::class, 'destroy'])->name('del-post');
 
 require __DIR__ . '/auth.php';
