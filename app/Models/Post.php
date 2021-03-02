@@ -14,8 +14,8 @@ class Post extends Model
         'user_id'
 
     ];
-    public function post()
+    public function user()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
 }
