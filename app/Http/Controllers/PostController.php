@@ -72,7 +72,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::where('id', $id)->orderBy('created_at', 'asc')->first();
+        $user = User::where('id', Auth::id())->first();
+
+        return view('post.edit', compact('post', 'user'));
     }
 
     /**
@@ -84,8 +87,12 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::where('id', $id)->orderBy('created_at', 'asc')->first();
 
+        $post->challenge = $request->challenge;
+        $post->save();
+
+        return redirect()->route('dashboard')->with('massages', 'Desafio proposto com sucesso');
     }
 
     /**
