@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    @include('includes.head')
-</head>
-<body>
-    @include('includes.header')
+<x-app-layout>
+    <x-slot name="header">
+    </x-slot>
 
-    @foreach ($post as $p)
-
+    <div class="">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <h3>Os desafios criados por você:</h3>
+            <div class="mr-2">
+                @include('post')
+            </div>
+        </div>
         
-        <h2>{{$p->challenge}}</h2>
-        <small>{{$p->user_id}}</small>
-        <br>
-    @endforeach
-
-    @include('includes.scripts')
-
-</body>
-</html>
+    </div>
+</x-app-layout>
