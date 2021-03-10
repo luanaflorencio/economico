@@ -22,7 +22,7 @@
                 </div>
             @endif
 
-            
+         
         
         @foreach($post as $p)
         {{ $p->user->name }}
