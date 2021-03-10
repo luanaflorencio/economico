@@ -15,12 +15,11 @@
     
     <datalist id="exemplos"> 
       @foreach ($user as $u)
-      <option value="{{ $u->name }}" action="{{route('posts.index'),$u->id}}"></option> 
+      <option value="{{ $u->name }}"></option> 
       @endforeach 
     </datalist>
   </form>
 </div>
-  
 
 </body>
 </html>
