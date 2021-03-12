@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LikeController extends Controller
 {
@@ -34,7 +36,13 @@ class LikeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $like = new Like();
+        $like->user_id = Auth::user()->id;
+        $like->post_id = $request->post;
+        $like->save();
+        // dd($like);
+        return redirect()->route('dashboard')->with('massages', 'Desafio proposto com sucesso');
+
     }
 
     /**

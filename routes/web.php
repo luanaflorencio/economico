@@ -13,6 +13,7 @@ use App\Http\Controllers\PostController;
 |
 */
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LikeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +22,7 @@ Route::get('/', function () {
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::resource('/posts', PostController::class)->middleware('auth');
+Route::resource('/likes', LikeController::class)->middleware('auth');
 
 Route::delete('/post/delete/{id}', [PostController::class, 'destroy'])->name('del-post');
 
